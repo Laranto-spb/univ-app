@@ -1,15 +1,16 @@
 <div class="container">
-<div class="row justify-content-center">
+<div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center">
 <% if @courses.any? %>
 
   <% @courses.each do |course| %>
-    <div class="card me-3 mb-3 col-4" style="width: 18rem;">
+    <div class="col">
+    <div class="card shadow me-3 mb-3">
         <div class="card-body">
-          <h5 class="card-title"><%= course.name %></h5>
-          <p class="card-text"><%= course.short_name %></p>
+          <h5 class="card-title"><%= course.short_name %>: <%= course.name %></h5>
           <p class="card-text"><%= course.description %></p>
-          <a href="#" class="btn btn-info">Go somewhere</a>
+          <a href="#" class="btn btn-info card-btn">See details</a>
       </div>
+    </div>
     </div>
   <% end %>
 
