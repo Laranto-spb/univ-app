@@ -1,0 +1,17 @@
+<div class="container pt-4">
+  <div class="row justify-content-center">
+    <h1 class="text-center mb-5"> Details </h1>
+    <div class="col-4">
+      <div class="card shadow me-3 mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><%= @student.name %></h5>
+            <p class="card-text">E-mail: <%=@student.email %></p>
+            <%= link_to "Edit profile", edit_student_path(@student), class: "btn btn-info card-btn" %>
+        </div>
+      </div>
+    </div>
+    <h3 class="text-center"> Enrollments:</h3>
+    <div class="col-4">
+    </div>
+  </div>
+</div>

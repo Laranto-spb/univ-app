@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row row-cols-md-2 row-cols-xl-3 row-cols-1 justify-content-center">
+    <% if @students.any? %>
+
+      <% @students.each do |student| %>
+        <div class="col">
+          <div class="card shadow me-3 mb-3">
+              <div class="card-body">
+                <h5 class="card-title"><%= student.name %></h5>
+                <p class="card-text">E-mail: <%=student.email %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+    <% end %>
+  </div>
+</div>

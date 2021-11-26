@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <% if flash.any? %>
+        <% flash.each do |key, msg| %>
+          <div class="alert <%= key == 'alert' ? 'alert-danger' : 'alert-success' %> alert-dismissible fade show" role="alert">
+            <% if key == 'notice' %>
+              <i class="bi bi-check-circle"></i>
+            <% else %>
+              <i class="bi bi-dash-circle"></i>
+            <% end %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <%= msg %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
