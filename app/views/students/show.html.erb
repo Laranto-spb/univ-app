@@ -6,7 +6,9 @@
           <div class="card-body">
             <h5 class="card-title"><%= @student.name %></h5>
             <p class="card-text">E-mail: <%=@student.email %></p>
-            <%= link_to "Edit profile", edit_student_path(@student), class: "btn btn-info card-btn" %>
+            <% if current_user == @student %>
+              <%= link_to "Edit profile", edit_student_path(@student), class: "btn btn-info card-btn" %>
+            <% end %>
         </div>
       </div>
     </div>
